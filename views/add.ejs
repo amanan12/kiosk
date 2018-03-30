@@ -1,0 +1,82 @@
+<% include ./header.ejs %>
+<script src='js/add.js'></script>
+    <div class="container">
+
+        <h1>Add New Book</h1>
+        <center>
+          <input id="barcode" class="barcode" type="text" placeholder="barcode scan" onblur="setFocus()"/>
+        </center>
+        <br><br>
+        <form method="POST" action="Add" class="c5">
+
+
+
+             <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputTitle">Title:</label>
+                    <input id = "title" name = "title" type="text" class="form-control" placeholder="Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputAuthor">Author:</label>
+                    <input id = "author" name = "author" type="text" class="form-control" placeholder="Author">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputSummary">Summary:</label>
+                    <textarea id = "summary" name="summary" type="text" class="form-control" placeholder="Summary"></textarea>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="copiesAvailable">Number of Copies</label>
+                    <input name="copiesAvailable" type="number" class="form-control" placeholder="##" value="1"/>
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="exampleInputSummary">Cover Type:</label>
+                    <select name ="coverType" class="form-control" disabled>
+                    </select>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="exampleInputSummary">Publisher:</label>
+                    <input id = "publisher" name="publisher" type="text" class="form-control" placeholder="Publisher"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Thumbnail:</label>
+                    <input id = "image" name="img" type="text" class="form-control" placeholder="Image URL"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Small Thumbnail:</label>
+                    <input id = "sImage" name="sImg" type="text" class="form-control" placeholder="Image URL"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Genres:</label>
+                    <input id = "genre" name="genre" type="text" class="form-control" placeholder="Genres"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">page Count:</label>
+                    <input id = "pageCount" name="pageCount" type="number" class="form-control" placeholder="Page Count"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">ISBN</label>
+                    <input id = "isbn" name="isbn" type="text" class="form-control" placeholder="ISBN"/>
+                </div>
+
+
+                <div class="pull-right">
+                    <button class="btn btn-default btn-danger">Cancel</button>
+                    <input class="btn btn-default btn-success" type="submit" value="Add">
+                </div>
+
+
+            </div>
+        </form>
+      </div>
+<% include ./footer.ejs %>

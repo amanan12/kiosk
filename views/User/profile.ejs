@@ -1,0 +1,27 @@
+<% include ../header.ejs %>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                    <p>
+                        <strong>osis</strong>: <%= user.osis %><br>
+                        <strong>cid</strong>: <%= user.cid %><br>
+                    </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../footer.ejs %>
+>>>>>>> 892f0309916805f9ce81261a86b5f495e622307b

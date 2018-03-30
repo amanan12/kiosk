@@ -1,0 +1,102 @@
+<% include ../header.ejs %>
+
+<div class="container">
+<div class="page-header">
+<h1><%=title%><small> &nbsp; &nbsp; &nbsp; <%=author%></small></h1>
+</div>
+
+
+<ol class="breadcrumb">
+    <%=genre%>
+
+</ol>
+
+
+<div class="container c3">
+
+
+<div class="row">
+<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+  <% if(img == "" || undefined){ %>
+    <img class="pic img-responsive" src="/assets/MissingCover.svg" alt="Responsive image"></div>
+  <%}else{%>
+    <img class="pic img-responsive" src="<%=img%>" alt="Responsive image"></div>
+  <%}%>
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 info2">
+
+    <h1><%=title%></h1>
+    <h2><%=author%></h2>
+
+    <small>
+
+    </small>
+
+    <h3>Summary</h3>
+    <% if(summary == ""){ %>
+      <p>Summary not available</p>
+    <%}else{%>
+      <p class="summary"><%=summary%></p>
+    <%}%>
+    <h3>Book Details</h3>
+    <ul>
+      <% if(pageCount == null){ %>
+      <li>Paperback, Page count unavailable</li>
+      <%}else{%>
+      <li>Paperback, <%=pageCount%> pages</li>
+      <%}%>
+    </ul>
+
+</div>
+</div>
+
+
+<div class="page-header">
+
+<h1>Related Books</h1>
+
+</div>
+
+
+<div class="col-xs-3 col-md-3">
+<a href="#" class="thumbnail">
+<img class="thumbnail1" src="https://lumiere-a.akamaihd.net/v1/images/au_movie_poster_thejunglebook_ca930c48.jpeg?region=0%2C0%2C300%2C450" alt="...">
+</a>
+</div>
+
+
+
+<div class="col-xs-3 col-md-3">
+<a href="#" class="thumbnail">
+<img class="thumbnail1" src="https://lumiere-a.akamaihd.net/v1/images/au_movie_poster_thejunglebook_ca930c48.jpeg?region=0%2C0%2C300%2C450" alt="...">
+</a>
+</div>
+
+
+
+<div class="col-xs-3 col-md-3">
+<a href="#" class="thumbnail">
+<img class="thumbnail1" src="https://lumiere-a.akamaihd.net/v1/images/au_movie_poster_thejunglebook_ca930c48.jpeg?region=0%2C0%2C300%2C450" alt="...">
+</a>
+</div>
+
+
+<div class="col-xs-3 col-md-3">
+<a href="#" class="thumbnail">
+<img class="thumbnail1" src="https://lumiere-a.akamaihd.net/v1/images/au_movie_poster_thejunglebook_ca930c48.jpeg?region=0%2C0%2C300%2C450" alt="...">
+</a>
+</div>
+</div>
+<hr>
+
+
+
+      <h4><a href="/book/edit/<%= list[0].id %>"><button type="submit">Edit</button></a></h4>
+      <form>
+        <input name="title" type="String" class="form-control" value="<%=title%>" style='display: none;'/>
+        <input name="author" type="String" class="form-control" value="<%=author%>" style='display: none;'/>
+        <input name="desc" type="String" class="form-control" value="<%=summary%>" style='display: none;'/>
+      </form>
+
+
+
+<% include ../footer.ejs %>

@@ -1,0 +1,178 @@
+<% include ./header.ejs %>
+
+
+<!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+
+        <!-- Wrapper for slides -->
+        <!-- Dynamic from JS -->
+        <div class="carousel-inner">
+          <% for(var i = 0; i < 3; i++){ %>
+            <% if(i === 0){ %>
+            <div class="item active">
+            <% }else{ %>
+              <div class="item">
+            <%}%>
+               <% if(list[i].img == "" || undefined){ %>
+               <div class="fill" style="background-image:url('/assets/example.jpg');"></div>
+               <%}else{%>
+               <div class="fill" style="background-image:url('<%=list[i].img%>');"></div>
+               <%}%>
+               <div class="carousel-caption"><h2> <%= list[i].title %> </h2><p> <%= list[i].summary %> </p>
+              </div>
+            </div>
+          <%}%>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+    <!-- RANDOM QUOTE -->
+        <div class="quote">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>A good book should leave you... slightly exhausted at the end. You live several lives while reading it. ~William Styron, interview, Writers at Work, 1958</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- /RANDOM QUOTE -->
+
+        <!-- Marketing Icons Section -->
+        <div id="dvMarketing" class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    New Releases
+                </h1>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Genre</h2>
+            </div>
+          </div class="row">
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtHO/f533b9ddeb.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtIG/8224da80f2.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtJx/c6c9e941e3.jpg" alt="">
+                </a>
+            </div>
+          </div>
+            <div class="row brow">
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtKm/0914e82d82.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtLx/ab741eacf5.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-lg-4">
+                <a href="/Library">
+                    <img class="img-responsive img-portfolio img-hover" src="http://puu.sh/qFtMp/122eeaf48d.jpg" alt="">
+                </a>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Modern Business Features</h2>
+            </div>
+            <div class="col-md-6">
+                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <ul>
+                    <li><strong>Bootstrap v3.2.0</strong>
+                    </li>
+                    <li>jQuery v1.11.0</li>
+                    <li>Font Awesome v4.1.0</li>
+                    <li>Working PHP contact form with validation</li>
+                    <li>Unstyled page elements for easy customization</li>
+                    <li>17 HTML pages</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+            </div> -->
+            <!-- <div class="col-md-6">
+                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+            </div> -->
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <div class="row">
+            <!-- LEFT -->
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+                <div> August </div>
+                <div class="media">
+                    <div class="media-left media-middle">14</div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Anime</h4>
+                        <p>Anime Club meeting in room 300 at 3:15pm</p>
+                    </div>
+
+                    <div class="media-left media-middle">15</div>
+                    <div class="media-body">
+                        <h4 class="media-heading">SYEP</h4>
+                        <p>Sign up for work this Fall. Sections include Web, Game and Hardware development.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+      <!-- Call to Action Section -->
+        <!-- <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                </div>
+            </div>
+        </div> -->
+
+<script src="/js/inxScript.js"></script>
+<% include ./footer.ejs %>

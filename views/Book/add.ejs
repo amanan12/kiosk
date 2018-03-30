@@ -1,0 +1,124 @@
+<% include ../header.ejs %>
+<script src="/js/add.backup.js"></script>
+
+    <header style="min-height: 20%;">
+        <div class="header-content">
+            <div class="header-content-outer">
+                <h1 id="homeHeading">Welcome to AOIT!!!!</h1>
+                <hr>
+                <p>No two persons ever read the same book.<b>–Edmund Wilson</b></p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        
+
+
+
+        <h1>Add New Book</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <input id="barcode" class="form-control barcode" type="text" placeholder="barcode scan" autofocus/>
+            </div>
+        </div>
+        <br><br>
+        <form method="POST" action="" class="c5">
+
+
+
+             <div class="row">
+                <div class="form-group">
+                    <label for="exampleInputSummary">ISBN</label>
+                    <input id = "isbn" name="isbn" type="text" class="form-control" placeholder="ISBN"/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputTitle">Title:</label>
+                    <input id = "title" name = "title" type="text" class="form-control" placeholder="Title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputTitle">SubTitle:</label>
+                    <input id ="subTitle" name="subTitle" type="text" class="form-control" placeholder="SubTitle">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputAuthor">Author:</label>
+                    <input id = "author" name = "author" type="text" class="form-control" placeholder="Author">
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputTeaser">Teaser:</label>
+                    <textarea id="teaser" name="teaser" type="text" class="form-control" placeholder="Teaser" row="5"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputSummary">Summary:</label>
+                    <textarea id="summary" name="summary" type="text" class="form-control" placeholder="Summary" row="10"></textarea>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="copiesAvailable">Number of Copies</label>
+                    <input name="copiesAvailable" type="number" class="form-control" placeholder="##" value="1"/>
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="exampleInputSummary">Cover Type:</label>
+                    <select name ="coverType" class="form-control" disabled>
+                    </select>
+                </div>
+                
+                <div class="form-group col-xs-12 col-sm-12 col-md-4">
+                    <label for="publishedDate">Published Date</label>
+                    <input name="publishedDate" type="text" class="form-control" placeholder="Published Date"/>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="form-group">
+                    <label for="exampleInputSummary">Publisher:</label>
+                    <input id = "publisher" name="publisher" type="text" class="form-control" placeholder="Publisher"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Thumbnail:</label>
+                    <input id = "image" name="img" type="text" class="form-control" placeholder="Image URL"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Small Thumbnail:</label>
+                    <input id = "sImage" name="sImg" type="text" class="form-control" placeholder="Image URL"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Genres:</label>
+                    <input id = "genre" name="genre" type="text" class="form-control" placeholder="Genres"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputSummary">Page Count:</label>
+                    <input id = "pageCount" name="pageCount" type="number" class="form-control" placeholder="Page Count"/>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="exampleInputLanguage">Language</label>
+                    <input id="language" name="language" type="text" class="form-control" placeholder="Language" />
+                </div>
+
+
+                <div class="pull-right">
+                    <button class="btn btn-default btn-danger">Cancel</button>
+                    <!-- input type="submit" id="add" class="btn btn-default btn-success" value="Add" / -->
+                    <button id="add" class="btn btn-default btn-success">Add</button>
+                </div>
+
+
+            </div>
+        <form>
+      </div>
+
+
+<% include ../footer.ejs %>

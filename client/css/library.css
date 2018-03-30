@@ -1,0 +1,67 @@
+.size {
+  width: 128px;
+  height: 191px;
+}
+/*.inner{
+  border: 1px solid red;
+}*/
+.header{
+  height: 200px;
+  margin-top: 50px;
+  background-image: url("https://images7.alphacoders.com/573/573647.jpg");
+  opacity: 0.8; 
+  filter: alpha(opacity=10);
+}
+.fool{
+  opacity: 1;
+  color: black;
+  font-weight: bold;
+}
+
+body{
+  background-color: lightgray;
+}
+
+.inner {
+  width: 350px;
+  border-top: solid 1px;
+  line-height: 10%;
+}
+
+.flame h3 {
+  font-size: 100%;
+  font-weight: bolder;
+  margin-top: 0px;
+}
+
+img {
+  vertical-align: top;
+  margin-right: 10px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 128px;
+  height: 191px;
+}
+
+.inner a, .inner a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  display: inline-block;
+  text-align: justify;
+}
+
+.flame {
+  width: 200px;
+  height: 275px;
+  display: inline-block;
+}
+
+.container{
+  padding: 20px;
+  margin: 20px;
+}

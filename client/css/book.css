@@ -1,0 +1,440 @@
+quote {
+    font-family: "Arizonia";
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+    margin-top: 1.2em;
+}
+
+.tbSmallerWidth {
+    width: 125px;
+}
+
+/*footer{
+  position:relative;
+  top:0;
+  left:45%;
+}*/
+
+/* TEMPLATE */
+
+.summary{
+  /*white-space: nowrap;*/
+overflow: hidden;
+text-overflow: ellipsis;
+/*max-width: 100%;*/
+max-height:200px;
+}
+
+.c4{
+  background-color:#66b3ff;
+  border-radius:10px;
+  margin:5px;
+  box-shadow:6px 9px 30px 1px black;
+}
+
+/*.c5{
+  background-color:#66b3ff;
+  border-radius:10px;
+  padding:-20px;
+  box-shadow:6px 9px 30px 1px black;
+}*/
+
+.c4 a{
+  color:black;
+}
+
+body {
+     /* padding-top: 50px; Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+     margin-top:20px;
+     /*background-color:#b3daff;*/
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+
+header.carousel {
+    height: 50%;
+    box-shadow:15px -15px 30px 1px black;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.c3{
+  padding-top:15px;
+  background-color:#66b3ff;
+  border-radius:5px;
+  /*margin*/
+}
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+
+.panel-body .img-responsive {
+  max-height: 175px;
+  margin: 0 auto;
+  display: block;
+}
+
+.pic {
+  width: 250px;
+  height: 400px;
+  box-shadow:5px 5px 0px 2px white;
+  border-radius:10px;
+}
+
+.barcode{
+  width:100%;
+  height:40px;
+  font-size: 26px;
+}
+
+.info2{
+  right:150px;
+  background-color:white;
+  padding:10px;
+  border-radius:10px;
+}
+
+@font-face {
+    font-family: 'redacted_scriptbold';
+    src: url('https://raw.githubusercontent.com/christiannaths/Redacted-Font/master/fonts/web/redacted-script-bold.eot');
+    src: url('https://raw.githubusercontent.com/christiannaths/Redacted-Font/master/fonts/web/redacted-script-bold.eot?#iefix') format('embedded-opentype'),
+         url('https://raw.githubusercontent.com/christiannaths/Redacted-Font/master/fonts/web/redacted-script-bold.woff') format('woff'),
+         url('https://raw.githubusercontent.com/christiannaths/Redacted-Font/master/fonts/web/redacted-script-bold.ttf') format('truetype'),
+         url('https://raw.githubusercontent.com/christiannaths/Redacted-Font/master/fonts/web/redacted-script-bold.svg#redacted_scriptbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.c2 p{
+    text-align: left;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #ddd;
+    line-height: 25px;
+	font-size: 22px;
+	font-family: 'redacted_scriptbold', Arial, serif;
+
+    }
+.c2 h2{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 50px;
+    color: saddlebrown;
+    line-height: 40px;
+
+   }
+.c2{
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+body,ul,li{
+    padding: ;
+    margin: 0;
+    /*background-color:white;*/
+
+
+}
+
+ul, li{
+    list-style: none;
+    /*color: #ED1ABB;*/
+    font-size:24px;
+}
+a{
+    font-size:20px;
+    text-decoration: none;
+    color: #888;
+}
+nav .account{
+    color: chocolate;
+}
+nav .library{
+    color: forestgreen;
+}
+nav .search{
+    color: navy;
+}
+nav .checkout{
+    color: maroon;
+}
+
+.check{
+  background-color:#66b3ff;
+  margin:100px;
+  padding:2%;
+}
+
+.check2{
+  background-color:#66b3ff;
+  margin-bottom:75px;
+  margin-top:75px;
+  padding:2%;
+}
+
+#checkout{
+  width:100%;
+  height:50px;
+  font-size:36px;
+}
+
+.jumbotron{
+  margin-top:15px;
+  background-color:#66b3ff;
+}
+
+.jumbotron a{
+  color:black;
+}
+
+.title{
+  font-size:26px;
+}
+
+.author{
+  font-size:26px;
+}
+
+nav a:hover{
+    color: #414141;
+}
+.open{
+    top: 0;
+}
+.menu-btn{
+    cursor: pointer;
+    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-hamburger.png');
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-color: #000;
+    display: inline;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 100;
+  margin-top: 785px;
+}
+.close-btn{
+    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-close.png');
+}
+nav{
+    position: fixed;
+    top: -1600px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    transition: all 0.5s;
+    font-family: arial;
+    z-index:3;
+}
+nav > ul{
+    max-width: 900px;
+    margin: 10px auto;
+    text-align: center;
+}
+nav > ul > li > a{
+    font-size: 58px;
+    font-weight: bold;
+    padding: 10px 0 40px 0;
+    display: block;
+}
+nav > ul > li{
+    padding: 40px 0 0 0;
+}
+nav > ul > li span{
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #adadad;
+}
+.line{
+    border-bottom: 1px solid #e0e0e0;
+}
+.sub-menu{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+}
+.sub-menu li{
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav .email-form{
+    background: saddlebrown;
+}
+nav .email-form h2{
+    font-size: 44px;
+    text-align: center;
+    padding-top: 40px;
+    color: #fff;
+}
+nav .email-form form{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 0 50px 0;
+}
+nav .email-form form .field{
+    padding: 10px;
+    margin: 0;
+    width: 70%;
+    box-sizing:border-box;
+    border: none;
+    font-size: 24px;
+    color: #414141;
+}
+nav .email-form form button{
+    background: #fff;
+    border: none;
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+@media all and (max-width: 500px){
+       nav > ul > li > a{
+            font-size: 44px;
+        }
+        nav .email-form h2{
+            font-size: 24px;
+        }
+        nav .email-form form .field{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    nav .email-form form button{
+            width:300px;
+            width:100%
+        }
+}
+
+.media-object  {
+  position: static;
+  margin-top:50px;
+  margin-left: 770px;
+  height:150px;
+}
+
+.media-obj {
+  position: static;
+  margin-top: 150px;
+  margin-left: 750px;
+  height: 300px;
+}
+
+.glyphicon {
+  font-size:40px;
+}
+
+.overlay{
+  position:absolute;
+  width:50%;
+  top:25%;
+  left:30%;
+  background-color:lightblue;
+  border-radius:10px;
+  height:50%;
+  box-shadow:3px 3px 10px 1px #56BAEC;
+  padding:2%;
+  z-index:2;
+}
+
+
+.line a:hover {
+    text-decoration: none;
+}
+
+body{
+  background-color: lightgray;
+}
+
+div div {
+  margin: 10px 0px;
+}
+img {
+  vertical-align: top;
+  margin-right: 10px;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.flame {
+   
+    width: 200px;
+  display: inline-block;
+}

@@ -1,0 +1,32 @@
+<% include ../header.ejs %>
+<script src="/js/checkout.js"></script>
+Welcome user <p id="user"><%=user.osis%></p>
+
+<div class="container">
+
+    <input id="checkout" type="text" placeholder="barcode scan" onblur="setFocus()"/>
+
+    <div class="row1 row">
+
+      <div class="row">
+
+
+       </div>
+
+
+
+
+      </div>
+  </div>
+
+
+<br><br>
+<form method="POST" action = "Checkout">
+  <!-- <input id = "booksArr" name="booksArr[]" type="text" class="form-control"/> -->
+  <!-- <input type="text" name="hnSkills" id="hnSkills" value="" disabled/> -->
+    <div class="dvSkills"></div>
+  <input id = "osis" name="osis" value="<%=user.osis%>" type="text" class="form-control" style='display: none;'/>
+  <input class="btn btn-default btn-warning" type="submit" value="Checkout">
+</form>
+
+<% include ../footer.ejs %>

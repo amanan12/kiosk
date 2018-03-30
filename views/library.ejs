@@ -1,0 +1,55 @@
+<% include ./header.ejs %>
+<link rel="stylesheet" type="text/css" href='/css/library.css'>
+    <div class="header">
+       <div>
+        <center><h1 class='fool'>Books</h1></center> 
+      </div>
+    </div>
+    <hr >
+    <div class="container-fluid">
+    
+  <div class="row second">
+    <!-- Hook -->
+  </div> 
+  
+  <!-- misfit -->  
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+          <h2 class="modal-title" id="myModalLabel"></h2> 
+        </div>
+        
+        <div class="modal-body">
+          
+          <div class="row">
+            <div class="col-md-4">
+              <img id="image" />
+            </div>
+
+            <div class="col-md-6">
+              <h4 id="genre"></h4>
+              <h4 id="author"></h4>
+              <h4 id="pub"></h4>
+              <h5 id="pages"></h5>
+            </div>
+          </div>
+ 
+          <hr />
+          
+          <p id="modal-body"></p>
+          
+        </div>
+        <div class="modal-footer">
+          <button id="btn1" class="btn btn-primary ">Add To Cart</button>
+          <button id="btn2" class="btn btn-danger ">Remove From Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </div>
+    <script src="js/library.js"></script>
+
+<% include ./footer.ejs %>

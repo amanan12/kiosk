@@ -1,0 +1,138 @@
+<% include ../header.ejs %>
+<script>
+    var e = window.localStorage;
+    
+    
+    function checkUser(){
+        
+        if(e.getItem("user") === null){
+            window.location.href = '/User/Login?redirect=' + encodeURI('/Checkout/Add');
+        } else {
+            console.log("MATCH");
+        }
+    }
+    checkUser();
+</script>
+
+<!-- 
+    <div class="">
+        <button type="button" class="btn btn-default btn-lg " aria-label="Left Align">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+    
+        <button type="button" class="btn btn-default btn-lg " aria-label="Left Align">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+    </div> 
+-->
+                    
+    <div class="container">
+
+        <div class="page-header">
+            <h1>Welcome <small>Check out </small></h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-8">
+                <input type="text" id="scanner" class="form-control scanner" placeholder="Scan ISBN #" value="" />
+            </div>
+              <div class="col-sm-12 col-md-4 col-lg-2">
+                <button class="btn btn-success add">Add</button>
+            </div>
+        </div>
+        <div class="row">
+            <table class="tData table" border="1">
+                <tr></tr>
+            </table>
+        
+        </div>
+        <div class="row">
+            <button class="btn btn-success">Checkout</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    
+    // CODE FOR CHECKOUT
+function checkCart(){
+  //var e = window.localStorage;
+  $("tr").html("");
+  for(var r in e){ 
+      
+      if(r === "user"){
+          
+      } else {
+          console.log( e.getItem(r) );  
+    var d =  JSON.parse( e.getItem(r) );
+    $("tr")[0].after( $.parseHTML( buildTableData(d) )[0]  );
+      }
+    
+  }
+}
+    
+    $(".add").click(function(){
+       var isbn = $("input").val();
+       
+       request(isbn);
+       
+    });
+    
+    function createImgHTML(str){
+        return "<img src='" + str + "' />";
+    }
+    
+    function removeItem(id){
+        e.removeItem(id);
+        
+        checkCart();
+    }
+    function buildTableData(data){
+        console.log(data.title)
+        return "<tr><td>" + createImgHTML(data.sImg)  + "</td><td>" + data.title + "</td><td>" + data.author + "</td><td>" + data.genre + "</td><td>" + "<button class='btn' onclick='removeItem(" + data.isbn + ")'>Remove</button>" + "</td></tr>";
+    }
+    checkCart();
+    var v;
+    var engine = window.localStorage;
+    
+    
+    function checkDuplicate(id){
+        
+        if( engine.getItem(id) === null ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function request(isbn){
+        
+        if( checkDuplicate(isbn) ) {
+            $.getJSON("https://aoit-api.azurewebsites.net/book?isbn=" + isbn, function(results){
+            
+                var root = results[0];
+                
+                v = root;
+                
+                $("tr")[0].after( $.parseHTML( buildTableData(root) )[0]  );
+                
+                engine.setItem(root.isbn, JSON.stringify(root));
+            });
+        } else {
+            alert("Already Added");
+        }
+        
+        
+    }
+         
+    </script>
+<% include ../footer.ejs %>
+<!--
+9780689839559
+9781416997887
+9781423171089
+9780545417303
+9781556226441
+9780547608327
+
+
+-->
+ 
